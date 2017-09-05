@@ -1,5 +1,4 @@
 #bo thu muc thaidz
-thaidz
 # Logs
 logs
 *.log
@@ -7,6 +6,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+thai
 # Runtime data
 pids
 *.pid
