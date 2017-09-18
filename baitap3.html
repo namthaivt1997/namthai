@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Tinh BMI</div>
+    <div type="" id="CanNang">
+        nhâp cân năng
+        <input id="w" type="text"> nhâp chiều cao
+        <input id="h" type="text">
+        <p id='content'></p>
+        <input type="button" value="Process" onclick="func()">
+    </div>
+
+
+    <div>
+        kết quả
+    </div>
+
+    <script>
+        function func() {
+            var a = document.getElementById("w").value;
+            var b = document.getElementById("h").value;
+            let tinhBMI = (a, b) => a / b * b;
+            console.log(tinhBMI(a, b));
+            c = tinhBMI(a, b);
+            console.log(a);
+            function kq(c) {
+                c < 18 && console.log("ban ốm");
+                c >= 18 && c <= 25 && console.log("bạn vưa");
+                c > 25 && console.log("bạn mập");
+            }
+            var t = kq(c);
+            document.getElementById("content").innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

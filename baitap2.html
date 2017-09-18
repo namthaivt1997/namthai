@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 200px;
+            background: #F7BE81;
+            text-align: center;
+        }
+
+        .LyLinh {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border: 2px solid black;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500px;
+            font-size: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <script>
+        function introduce() {
+            /*  var node = document.createElement("div");
+              var textnode = document.createTextNode("LiLich");
+              node.appendChild(textnode);
+              document.getElementById("LiLinh").appendChild(node);*/
+            var x = document.getElementById("LiLich");
+            if (x.style.display == "block")
+                x.style.display = "none";
+            else
+                x.style.display = "block";
+        }
+    </script>
+
+
+    <div class="LyLinh" id="LiLich" style="display:none">
+
+        <p>Họ và tên : Đoàn Tất Nam thái</p>
+        <p>Ngày sinh: 08/08/1997</p>
+        <p>Quê quán: Nam Định</p>
+        <p>Email: doantatnamthai@gmail.com</p>
+        <p>Facebook:</p><a href=" https://www.facebook.com/leethaidui?ref=bookmarks ">Nam Thái</a>
+
+    </div>
+
+    <button onclick="introduce()" id="">
+        Giới thiệu đi
+    </button>
+
+
+</body>
+
+</html>
