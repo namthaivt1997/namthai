@@ -12,10 +12,10 @@
     <div>Tinh BMI</div>
     <div type="" id="CanNang">
         nhâp cân năng
-        <input id="w" type="text"> nhâp chiều cao
-        <input id="h" type="text">
+        <input id="w" type="value"> nhâp chiều cao
+        <input id="h" type="value">
         <p id='content'></p>
-        <input type="button" value="Process" onclick="func()">
+        <input type="button" value="process" onclick="func()">
     </div>
 
 
@@ -25,19 +25,22 @@
 
     <script>
         function func() {
-            var a = document.getElementById("w").value;
-            var b = document.getElementById("h").value;
-            let tinhBMI = (a, b) => a / b * b;
-            console.log(tinhBMI(a, b));
-            c = tinhBMI(a, b);
+            let _id = id => document.getElementById(id);
+            var a = _id("w").value;
+            var b = _id("h").value;
             console.log(a);
-            function kq(c) {
-                c < 18 && console.log("ban ốm");
-                c >= 18 && c <= 25 && console.log("bạn vưa");
-                c > 25 && console.log("bạn mập");
-            }
-            var t = kq(c);
-            document.getElementById("content").innerHTML = t;
+            let tinhBMI = (a, b) => a / (b * b);
+
+            let c = tinhBMI(a, b);
+            console.log(c);
+            var t = "";
+
+            if (c < 18) { t = "ban ốm" };
+            if (c >= 18 && c <= 25) { t = "bạn vưa" };
+            if (c > 25) { t = "bạn mập" };
+
+
+            _id("content").innerHTML = t;
         }
     </script>
 </body>
