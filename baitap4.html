@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background: orchid;
+        }
+    .thai {    
+width: 70px;    
+height: 70px;   
+padding: 10px 16px; 
+font-size: 24px;    
+line-height: 1.33;  
+background: blue;
+border-radius: 20px;
+text-align: center;
+}
+.hidden{display: none;}
+    </style>
+</head>
+<body id = "body">
+    <div id = "gt" class = "tgt">
+        <p>Công tắc</p>
+    </div>
+    
+    <button id= "button"type="button" class="thai" onclick="func()">click me 
+    </button>
+    <script>
+        let _id = (id) => document.getElementById(id);
+        let func = () =>{
+         if(_id("gt").className == "hidden")
+         {
+
+            _id('gt').removeAttribute("class");
+            _id("button").style.background = "blue";
+            _id("body").style.background = "orchid"; 
+         }
+         else{
+            _id("button").style.background = "red";
+            _id("body").style.background = "blue";        
+            _id('gt').setAttribute("class", "hidden");
+         }
+        }
+
+    </script>
+    
+</body>
+</html>
